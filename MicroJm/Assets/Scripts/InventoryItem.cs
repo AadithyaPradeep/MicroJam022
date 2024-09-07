@@ -23,6 +23,7 @@ public class InventoryItem : MonoBehaviour
      * public Inventory inventory;
     public GameObject InventoryObj;*/
 
+    
     public void Awake()
     {
         
