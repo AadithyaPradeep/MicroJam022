@@ -28,7 +28,7 @@ public class TriggerShop : MonoBehaviour
     }
     private void Update()
     {
-       if(Input.GetKey(KeyCode.E))
+       if(Input.GetKeyDown(KeyCode.E))
         {
             if(iscollision)
             {
