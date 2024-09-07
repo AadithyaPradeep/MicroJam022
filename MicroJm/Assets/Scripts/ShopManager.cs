@@ -12,7 +12,7 @@ public class ShopManager : MonoBehaviour
     public GameObject InventoryItem;
     public Transform InventoryCanvas;
     public GameObject InventoryMenu;
-   
+    public GameObject TradeUI;
 
    private void Awake()
     {
@@ -32,6 +32,10 @@ public class ShopManager : MonoBehaviour
     {
         ShopUI.SetActive(bl);
     }
+    public void ToggleTrade(bool bl)
+    {
+        TradeUI.SetActive(bl);
+    }
     private void Update()
     {
         if(ShopUI.activeSelf == false && Input.GetKeyDown(KeyCode.I) && InventoryMenu.activeSelf == false)
@@ -49,5 +53,6 @@ public class ShopManager : MonoBehaviour
         
         CoinsText.text = Coins.ToString();
     }
+
     
 }

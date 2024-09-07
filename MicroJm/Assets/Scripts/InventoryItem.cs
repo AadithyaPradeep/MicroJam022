@@ -35,6 +35,10 @@ public class InventoryItem : MonoBehaviour
     }
     public void Update()
     {
+        if(stockInt <= 0)
+        {
+            Destroy(gameObject);
+        }
         name.text = nameSt;
         
         stock.text = "Stock : "+ stockInt.ToString();
