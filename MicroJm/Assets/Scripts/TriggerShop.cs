@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class TriggerShop : MonoBehaviour
 {
+    public bool iscollision;
     // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
+        if(collision.gameObject.CompareTag("Player"))
+        {
 
-    // Update is called once per frame
-    void Update()
+            iscollision = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            iscollision = false;
+            if(ShopManager.instance.ShopUI.active == true)
+            {
+                ShopManager.instance.ToggleShop(false);
+            }
+           
+        }
+    }
+    private void Update()
+    {
+       if(Input.GetKey(KeyCode.E))
+        {
+            if(iscollision)
+            {
+                ShopManager.instance.ToggleShop(true);
+            }
+        }
     }
 }
