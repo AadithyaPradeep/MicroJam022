@@ -58,7 +58,7 @@ public class ShopItem : MonoBehaviour
                 Transform canvas = shopManager.InventoryCanvas;
 
                 itemSet.nameSt = nameSt;
-                itemSet.stockInt = stockInt + quantityInt; // Start with the quantity bought
+                itemSet.stockInt = quantityInt; // Start with the quantity bought
                 itemSet.imageObj = imageObj;
                 itemSet.Usable = Usable;
                 // Instantiate and set the new item properties
