@@ -76,6 +76,7 @@ public class ShopItem : MonoBehaviour
                 itemSet.imageObj = imageObj;
                 itemSet.Usable = Usable;
                 itemSet.energy = energy;
+                itemSet.price = priceint;
                 
                 // Instantiate and set the new item properties
 
