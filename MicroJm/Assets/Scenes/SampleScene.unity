@@ -931,8 +931,8 @@ MonoBehaviour:
   - {fileID: 3764378284199135862, guid: 3b17add9b8dab6f42800b52f2c3ffb5e, type: 3}
   - {fileID: 3764378284199135862, guid: 3b17add9b8dab6f42800b52f2c3ffb5e, type: 3}
   - {fileID: 3764378284199135862, guid: 3b17add9b8dab6f42800b52f2c3ffb5e, type: 3}
-  itemNo: 0
-  spawnCanvas: {fileID: 0}
+  itemNo: 5
+  spawnCanvas: {fileID: 5785697373106769041}
 --- !u!1 &385997172
 GameObject:
   m_ObjectHideFlags: 0
@@ -4448,7 +4448,7 @@ GameObject:
   - component: {fileID: 1651620352}
   m_Layer: 5
   m_Name: EnergyBar
-  m_TagString: Untagged
+  m_TagString: Energy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4638,7 +4638,7 @@ GameObject:
   - component: {fileID: 1727806794}
   m_Layer: 0
   m_Name: Shop Manager
-  m_TagString: Untagged
+  m_TagString: ShopManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -19,6 +19,7 @@ public class GetTradeItem : MonoBehaviour
 
     void Start()
     {
+        Count = items.Count;
         itemNo = Random.Range(3, 5);
         for (int i = 0; i < itemNo; i++)
         {
@@ -49,6 +50,7 @@ public class GetTradeItem : MonoBehaviour
             Instantiate(TradeItem, spawnCanvas);
             items.RemoveAll(x => x.name == items[num1].name);
             items.RemoveAll(x => x.name == items[num2].name);
+            
             Count = items.Count;
         }
     }
