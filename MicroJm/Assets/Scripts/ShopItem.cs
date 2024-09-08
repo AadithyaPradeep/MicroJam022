@@ -22,7 +22,18 @@ public class ShopItem : MonoBehaviour
     public int quantityInt;
     public ShopManager shopManager;
     public bool Usable = false;
+    public int energy;
+    public int StockMin;
+    public int StockMax;
 
+    private void Start()
+    {
+        shopManager = GameObject.FindGameObjectWithTag("ShopManager").GetComponent<ShopManager>();
+        if(stockInt == 0)
+        {
+            stockInt = Random.Range(StockMin,StockMax);
+        }
+    }
     public void Update()
     {
         name.text = nameSt;
@@ -61,6 +72,7 @@ public class ShopItem : MonoBehaviour
                 itemSet.stockInt = quantityInt; // Start with the quantity bought
                 itemSet.imageObj = imageObj;
                 itemSet.Usable = Usable;
+                itemSet.energy = energy;
                 // Instantiate and set the new item properties
                 GameObject newItem = Instantiate(item, canvas);
                 itemSet = newItem.GetComponent<InventoryItem>();

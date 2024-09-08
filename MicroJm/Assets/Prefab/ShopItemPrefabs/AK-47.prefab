@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 2815340590355002004}
   - component: {fileID: 1333650039178919960}
   m_Layer: 5
-  m_Name: ShopItem
+  m_Name: AK-47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -368,15 +368,15 @@ MonoBehaviour:
   quantity: {fileID: 6263223799909294708}
   imageObj: {fileID: 4436329611316896888}
   image: {fileID: 0}
-  nameSt: Item Name
+  nameSt: AK-47
   stockInt: 0
-  priceint: 0
+  priceint: 15
   quantityInt: 1
   shopManager: {fileID: 0}
   Usable: 0
   energy: 0
-  StockMin: 0
-  StockMax: 0
+  StockMin: 1
+  StockMax: 5
 --- !u!1 &3841902680658329552
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,8 +753,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 148.99997}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 132.08871, y: 148.99997}
+  m_SizeDelta: {x: 464.1774, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3987943541461081916
 CanvasRenderer:
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -528.8755, y: 0, z: -528.4667, w: 0}
+  m_margin: {x: -467.93765, y: 0, z: -203.76001, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

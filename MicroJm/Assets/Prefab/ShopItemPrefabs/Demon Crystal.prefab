@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 2815340590355002004}
   - component: {fileID: 1333650039178919960}
   m_Layer: 5
-  m_Name: ShopItem
+  m_Name: Demon Crystal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -368,15 +368,15 @@ MonoBehaviour:
   quantity: {fileID: 6263223799909294708}
   imageObj: {fileID: 4436329611316896888}
   image: {fileID: 0}
-  nameSt: Item Name
+  nameSt: Demon Crystal
   stockInt: 0
-  priceint: 0
+  priceint: 5
   quantityInt: 1
   shopManager: {fileID: 0}
   Usable: 0
-  energy: 0
-  StockMin: 0
-  StockMax: 0
+  energy: 40
+  StockMin: 1
+  StockMax: 10
 --- !u!1 &3841902680658329552
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -528.8755, y: 0, z: -528.4667, w: 0}
+  m_margin: {x: -668.4971, y: 0, z: -670.8181, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
