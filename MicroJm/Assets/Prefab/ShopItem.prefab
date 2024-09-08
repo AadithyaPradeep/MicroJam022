@@ -374,6 +374,9 @@ MonoBehaviour:
   quantityInt: 1
   shopManager: {fileID: 0}
   Usable: 0
+  energy: 0
+  StockMin: 0
+  StockMax: 0
 --- !u!1 &3841902680658329552
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +847,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -528.8755, y: 0, z: -528.4667, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 2815340590355002004}
   - component: {fileID: 4199793914931072237}
   m_Layer: 5
-  m_Name: TradeItem
+  m_Name: ChairtoOilBarrel 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,19 +373,19 @@ MonoBehaviour:
   imageObj2: {fileID: 2892038071872053078}
   image1: {fileID: 0}
   image2: {fileID: 0}
-  nameSt1: 
-  nameSt2: 
-  Item2NoInt: 0
-  Item1NoInt: 0
+  nameSt1: OilBarrel
+  nameSt2: Chair
+  Item2NoInt: 1
+  Item1NoInt: 1
   ItemMultiplier: {fileID: 6263223799909294708}
   ItemMultiplierInt: 1
-  Usable1: 0
+  Usable1: 1
   Usable2: 0
-  energy1: 0
+  energy1: 40
   energy2: 0
   shopManager: {fileID: 0}
   MinValue: 0
-  MaxValue: 0
+  MaxValue: 2
 --- !u!1 &3841902680658329552
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,7 +837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 62.4, y: 129.2}
+  m_AnchoredPosition: {x: 31, y: 128}
   m_SizeDelta: {x: 134.06, y: 43.3781}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6045231144152636888
@@ -902,7 +902,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -971,7 +971,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 65, y: 331.9}
+  m_AnchoredPosition: {x: 36, y: 329}
   m_SizeDelta: {x: 134.06, y: 43.3781}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3987943541461081916
@@ -1036,7 +1036,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0

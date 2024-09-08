@@ -22,7 +22,19 @@ public class ShopItem : MonoBehaviour
     public int quantityInt;
     public ShopManager shopManager;
     public bool Usable = false;
+    public int energy;
+    public int StockMin;
+    public int StockMax;
+    public int value;
 
+    private void Start()
+    {
+        shopManager = GameObject.FindGameObjectWithTag("ShopManager").GetComponent<ShopManager>();
+        if(stockInt == 0)
+        {
+            stockInt = Random.Range(StockMin,StockMax);
+        }
+    }
     public void Update()
     {
         name.text = nameSt;
@@ -56,16 +68,19 @@ public class ShopItem : MonoBehaviour
                 GameObject item = shopManager.InventoryItem;
                 InventoryItem itemSet = item.GetComponent<InventoryItem>();
                 Transform canvas = shopManager.InventoryCanvas;
-
+                GameObject newItem = Instantiate(item, canvas);
+                itemSet = newItem.GetComponent<InventoryItem>();
+                item.GetComponent<InventoryItem>().enabled = true;
                 itemSet.nameSt = nameSt;
                 itemSet.stockInt = quantityInt; // Start with the quantity bought
                 itemSet.imageObj = imageObj;
                 itemSet.Usable = Usable;
-                // Instantiate and set the new item properties
-                GameObject newItem = Instantiate(item, canvas);
-                itemSet = newItem.GetComponent<InventoryItem>();
-
+                itemSet.energy = energy;
                 
+                // Instantiate and set the new item properties
+
+
+
             }
 
             // Update shop stock and reduce player's coins

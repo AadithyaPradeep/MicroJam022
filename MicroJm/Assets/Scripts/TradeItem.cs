@@ -26,10 +26,16 @@ public class TradeItem : MonoBehaviour
     public int ItemMultiplierInt;
     public bool Usable1;
     public bool Usable2;
-
+    public int energy1;
+    public int energy2;
     public ShopManager shopManager;
     
 
+    private void Start()
+    {
+        
+        shopManager = GameObject.FindGameObjectWithTag("ShopManager").GetComponent<ShopManager>();
+    }
     public void Update()
     {
         Item1Name.text = nameSt1;
@@ -39,6 +45,7 @@ public class TradeItem : MonoBehaviour
         imageObj1.sprite = image1;
         imageObj2.sprite = image2;
         ItemMultiplier.text = "x"+ItemMultiplierInt.ToString();
+       
     }
 
     public void OnTrade()
@@ -76,14 +83,17 @@ public class TradeItem : MonoBehaviour
             GameObject item = shopManager.InventoryItem;
             InventoryItem itemSet = item.GetComponent<InventoryItem>();
             Transform canvas = shopManager.InventoryCanvas;
+            GameObject newItem = Instantiate(item, canvas);
+            itemSet = newItem.GetComponent<InventoryItem>();
 
-            itemSet.nameSt = nameSt1;
+            // Instantiate and set the new item properties
+            itemSet.enabled = true;
+            itemSet.nameSt = Item1Name.text;
             itemSet.stockInt = Item1NoInt; // Start with the quantity bought
             itemSet.imageObj = imageObj1;
             itemSet.Usable = Usable1;
-            // Instantiate and set the new item properties
-            GameObject newItem = Instantiate(item, canvas);
-            itemSet = newItem.GetComponent<InventoryItem>();
+            itemSet.energy = energy1;
+           
 
 
         }

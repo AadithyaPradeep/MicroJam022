@@ -5,47 +5,37 @@ using UnityEngine.UI;
 
 public class EnergyBar : MonoBehaviour
 {
-    private Energy energy;
-    private Image barImage;
+    private Slider slider;
+    public float energyAmt;
+    public int StartEnergy;
+    public int energyConsumeAmt;
+
     private void Awake()
     {
-        barImage = transform.Find("Bar").GetComponent<Image>();
-
-        energy = new Energy();
-
+        slider = GetComponent<Slider>();
+        energyAmt = StartEnergy;
     }
     private void Update()
     {
-        energy.Update();
-        barImage.fillAmount = energy.GetEnergyNormalized();
+        
+        
+        slider.value = energyAmt;
+        if (energyAmt < 0)
+        {
+            energyAmt = 0;
+        }
+        else
+        {
+            energyAmt = energyAmt - energyConsumeAmt * Time.deltaTime;
+        }
+       
+    }
+    public void Regen(int energy)
+    {
+        int prevval = energyConsumeAmt;
+        energyConsumeAmt = 0;
+        energyAmt += energy;
+        energyConsumeAmt = prevval;
     }
 
 }
-
-public class Energy
-{
-    public const int ENERGY_MAX = 100;
-    private float energyAmount;
-    private float energyConsumeAmount;
-
-    public Energy()
-    {
-        energyAmount = 100;
-        energyConsumeAmount = 30f;
-    }
-
-    public void Update()
-    {
-        energyAmount -= energyConsumeAmount * Time.deltaTime;
-    }
-
-    public void TryRegenEnergy(int amount)
-    {
-        energyAmount += amount;
-    }
-
-    public float GetEnergyNormalized()
-    {
-        return energyAmount / ENERGY_MAX;
-    }
-    }

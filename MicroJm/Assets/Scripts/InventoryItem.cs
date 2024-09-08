@@ -19,14 +19,16 @@ public class InventoryItem : MonoBehaviour
     
     public ShopManager shopManager;
     public bool Usable;
+    public EnergyBar energyBar;
+    public int energy;
     /* Make Inventory Class and Add Here
      * public Inventory inventory;
     public GameObject InventoryObj;*/
 
     
-    public void Awake()
+    public void Start()
     {
-        
+        energyBar = GameObject.FindGameObjectWithTag("Energy").GetComponent<EnergyBar>();
         Use.SetActive(false);
         if(Usable)
         {
@@ -49,6 +51,7 @@ public class InventoryItem : MonoBehaviour
     public void OnUse()
     {
         stockInt--;
+        energyBar.Regen(energy);
     }
     
 }
