@@ -26,9 +26,9 @@ public class GetTradeItem : MonoBehaviour
             
             num1 = Random.Range(0, Count - 1);
             num2 = Random.Range(0, Count - 1);
-            while (num1 == num2)
+            while (num1 == num2 && num2 < Count)
             {
-                num2 = Random.Range(0, num1);
+                num2 = Random.Range(0, Count-1);
             }
 
             
@@ -36,6 +36,7 @@ public class GetTradeItem : MonoBehaviour
             TradeItem.GetComponent<TradeItem>().nameSt2 = items[num2].GetComponent<ShopItem>().nameSt;
             TradeItem.GetComponent<TradeItem>().Item1NoInt = items[num1].GetComponent<ShopItem>().value;
             TradeItem.GetComponent<TradeItem>().Item2NoInt = items[num2].GetComponent<ShopItem>().value;
+            TradeItem.GetComponent<TradeItem>().price = items[num2].GetComponent<ShopItem>().priceint;
             if (GCD(TradeItem.GetComponent<TradeItem>().Item1NoInt, TradeItem.GetComponent<TradeItem>().Item2NoInt) != 0)
             {
                 TradeItem.GetComponent<TradeItem>().Item1NoInt /= GCD(TradeItem.GetComponent<TradeItem>().Item1NoInt, TradeItem.GetComponent<TradeItem>().Item2NoInt);

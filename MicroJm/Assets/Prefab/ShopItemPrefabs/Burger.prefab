@@ -368,7 +368,7 @@ MonoBehaviour:
   quantity: {fileID: 6263223799909294708}
   imageObj: {fileID: 4436329611316896888}
   image: {fileID: 0}
-  nameSt: Burger
+  nameSt: Crossaint
   stockInt: 2
   priceint: 7
   quantityInt: 1

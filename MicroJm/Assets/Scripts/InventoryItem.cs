@@ -21,6 +21,7 @@ public class InventoryItem : MonoBehaviour
     public bool Usable;
     public EnergyBar energyBar;
     public int energy;
+    public int price;
     /* Make Inventory Class and Add Here
      * public Inventory inventory;
     public GameObject InventoryObj;*/

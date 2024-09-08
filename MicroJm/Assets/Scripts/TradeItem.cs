@@ -29,6 +29,7 @@ public class TradeItem : MonoBehaviour
     public int energy1;
     public int energy2;
     public ShopManager shopManager;
+    public int price;
     
 
     private void Start()
@@ -93,6 +94,7 @@ public class TradeItem : MonoBehaviour
             itemSet.imageObj = imageObj1;
             itemSet.Usable = Usable1;
             itemSet.energy = energy1;
+            itemSet.price = price;
            
 
 
