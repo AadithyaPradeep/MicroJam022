@@ -29,8 +29,7 @@ public class TradeItem : MonoBehaviour
     public int energy1;
     public int energy2;
     public ShopManager shopManager;
-    public int MinValue;
-    public int MaxValue;
+    
 
     private void Start()
     {
@@ -46,8 +45,7 @@ public class TradeItem : MonoBehaviour
         imageObj1.sprite = image1;
         imageObj2.sprite = image2;
         ItemMultiplier.text = "x"+ItemMultiplierInt.ToString();
-        MinValue = Item1NoInt / Item2NoInt * Random.Range(-5,-2);
-        MinValue = Item1NoInt / Item2NoInt * Random.Range(2, 5);
+       
     }
 
     public void OnTrade()
@@ -85,15 +83,17 @@ public class TradeItem : MonoBehaviour
             GameObject item = shopManager.InventoryItem;
             InventoryItem itemSet = item.GetComponent<InventoryItem>();
             Transform canvas = shopManager.InventoryCanvas;
+            GameObject newItem = Instantiate(item, canvas);
+            itemSet = newItem.GetComponent<InventoryItem>();
 
-            itemSet.nameSt = nameSt1;
+            // Instantiate and set the new item properties
+            itemSet.enabled = true;
+            itemSet.nameSt = Item1Name.text;
             itemSet.stockInt = Item1NoInt; // Start with the quantity bought
             itemSet.imageObj = imageObj1;
             itemSet.Usable = Usable1;
             itemSet.energy = energy1;
-            // Instantiate and set the new item properties
-            GameObject newItem = Instantiate(item, canvas);
-            itemSet = newItem.GetComponent<InventoryItem>();
+           
 
 
         }

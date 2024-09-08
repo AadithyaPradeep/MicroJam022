@@ -26,7 +26,7 @@ public class InventoryItem : MonoBehaviour
     public GameObject InventoryObj;*/
 
     
-    public void Awake()
+    public void Start()
     {
         energyBar = GameObject.FindGameObjectWithTag("Energy").GetComponent<EnergyBar>();
         Use.SetActive(false);
